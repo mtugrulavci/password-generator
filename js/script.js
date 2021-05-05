@@ -10,15 +10,18 @@ var characters = "";
 var password = "";
 var passwordLenght = 0;
 var container ="";
-
+// Asking password criteria
 var askCriteria = function() {
   var passwordLowercase = window.confirm("Do you want lowercase in the password?" );
   var passwordUppercase = window.confirm("Do you want uppercase in the password?") ;
   var passwordNumbers = window.confirm("Do you want numbers in the password?") ;
   var passwordSpeacialCharacter = window.confirm("Do you want special characters in the password?") ;
   if(passwordLowercase === false && passwordUppercase===false &&passwordNumbers===false&&passwordSpeacialCharacter===false){
-    return  window.alert("you have to select one condition"),askCriteria();
+    return  window.alert("you have to select one condition"), askCriteria();
   }
+  // Folowing code makes sure selected criteria appears at leats once in the password
+
+  //Creates a container contains all selected criteria
     characters = "";
     container = "";
     if (passwordLowercase){
@@ -34,6 +37,7 @@ var askCriteria = function() {
       container = container +symbols;
     }
 
+// For loop makes sure selected criteria appears on the password by inserting first the selected criteria
 for (var k = 0; k < passwordLenght ; k++){
   if (passwordLowercase && k === 0) {
     characters+=  alphaLower.charAt(
@@ -52,12 +56,13 @@ for (var k = 0; k < passwordLenght ; k++){
         characters+=symbols.charAt(
           Math.floor(Math.random() * symbols.length))
           }
+          // When criteria is met then select from the mix container arbitrarily which was selected based on the criteria 
   else {
     characters += container.charAt(
       Math.floor(Math.random() * container.length))
        }
   }
-  password=characters;
+password = characters;
 }
   
 

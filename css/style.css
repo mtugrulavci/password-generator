@@ -1,9 +1,10 @@
+/* RESETING DEFAULT SETTINGS*/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
+/*BODY RULES */
 html,
 body,
 .wrapper {
@@ -22,7 +23,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
-
+/*HEADER CSS RULES*/
 header {
   text-align: center;
   padding: 20px;
@@ -53,7 +54,7 @@ header {
 .card-body {
   min-height: 100px;
 }
-
+/*FOOTER CSS RULES*/
 .card-footer {
   text-align: center;
 }
@@ -71,7 +72,7 @@ header {
   display: block;
   clear: both;
 }
-
+/*BUTTON CSS RULES*/
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -96,7 +97,7 @@ button[disabled] {
 .float-right {
   float: right;
 }
-
+/*TEXTAREA CSS RULES*/
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
